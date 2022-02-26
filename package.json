@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type" : "git",
+    "url"  : "https://github.com/lavanyacheemakurthy/string-case-converter"
+  },
+  "keywords": ["camelCase","camel case","pascalCase","pascal case","snakeCase","snake case","string case","case converter","string case converter","string to camel"],
+  "author": "Sai Lavanya Cheemakurthy <cheemakurthysailavanya@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.15"
