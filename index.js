@@ -1,13 +1,15 @@
 function camelCase(input) {
   return input
     .split(" ")
-    .map((s,i) => i==0 ?s.toLowerCase()  :s[0].toUpperCase() + s.slice(1).toLowerCase() )
+    .map((s, i) =>
+      i == 0 ? s.toLowerCase() : s[0].toUpperCase() + s.slice(1).toLowerCase()
+    )
     .join("");
 }
-function snakeCase(input) {
+function snakeCase(input, { allLower = false }={}) {
   return input
     .split(" ")
-    .map((s) => s.toUpperCase())
+    .map((s) => (allLower ?  s.toLowerCase(): s.toUpperCase() ))
     .join("_");
 }
 function pascalCase(input) {
@@ -16,4 +18,11 @@ function pascalCase(input) {
     .map((s) => s[0].toUpperCase() + s.slice(1).toLowerCase())
     .join("");
 }
-module.exports={camelCase,snakeCase,pascalCase}
+function kebabCase(input) {
+  return input
+    .split(" ")
+    .map((s) => s.toLowerCase())
+    .join("-");
+}
+console.log(snakeCase('Test me for SNAKE case'));
+module.exports = { camelCase, snakeCase, pascalCase,kebabCase };
